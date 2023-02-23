@@ -1,0 +1,39 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:set var="contextRoot" value="${pageContext.request.contextPath}"/>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Add Expense</h1>
+	<form:form action="${contextRoot}/expense" method="post" modelAttribute="expense">
+		<form:hidden path="id"/>
+		<form:input path="firstName" placeholder="Enter expense name"/><br/>
+		<form:input path="lastName" placeholder="Enter expense amount"/><br/>
+		<form:textarea path="gender" placeholder="Enter gender"/><br/>
+		<form:textarea path="dob" placeholder="Enter note"/><br/>
+		<form:textarea path="panNum" placeholder="Enter note"/><br/>
+		<form:textarea path="aadhaarNum" placeholder="Enter note"/><br/>
+		<form:textarea path="mobileNum" placeholder="Enter note"/><br/>
+		<form:textarea path="emailId" placeholder="Enter note"/><br/>
+		<form:textarea path="officeMail" placeholder="Enter note"/><br/>
+		<form:textarea path="permanentAddress" placeholder="Enter note"/><br/>
+		<form:textarea path="presentAddress" placeholder="Enter note"/><br/>
+		<form:textarea path="bloodGroup" placeholder="Enter note"/><br/>
+		<form:textarea path="profilePict" placeholder="Enter note"/><br/>
+		<form:textarea path="doj" placeholder="Enter note"/><br/>
+		<form:textarea path="empLevel" placeholder="Enter note"/><br/>
+		<form:textarea path="postName" placeholder="Enter note (optional)"/><br/>
+		<form:textarea path="basicPay" placeholder="Enter note"/><br/>
+		<form:textarea path="houseAllowance" placeholder="Enter note"/><br/>
+		
+		
+		<button type="submit">Add Expense</button>
+	</form:form>
+</body>
+</html>

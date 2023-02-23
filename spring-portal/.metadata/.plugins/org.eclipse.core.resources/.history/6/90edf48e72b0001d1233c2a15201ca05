@@ -1,0 +1,14 @@
+package com.deloitte.expense.service;
+
+import java.util.List;
+
+import com.deloitte.expense.model.Employee;
+import com.deloitte.expense.model.Expense;
+
+public interface ExpenseService {
+
+	List<Employee> findAll();
+	void save(Employee employee);
+	Employee findById(Long id);
+	void delete(Long id);	
+}

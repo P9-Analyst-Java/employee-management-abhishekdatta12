@@ -1,0 +1,12 @@
+package com.deloitte.expense.dao;
+
+import java.util.List;
+
+import com.deloitte.expense.model.Employee;
+
+public interface EmployeeDao {
+
+	List<Employee> search(Integer id);
+	List<Employee> search(String name);
+	
+}

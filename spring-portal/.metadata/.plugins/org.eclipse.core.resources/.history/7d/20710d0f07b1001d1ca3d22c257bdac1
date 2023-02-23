@@ -1,0 +1,43 @@
+package com.deloitte.expense.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.deloitte.expense.model.Employee;
+import com.deloitte.expense.model.Expense;
+import com.deloitte.expense.repository.ExpenseRepository;
+
+@Service
+public class ExpenseServiceImpl implements ExpenseService{
+
+	@Autowired
+	ExpenseRepository expenseRepository;
+	
+	@Override
+	public List<Employee> findAll() {
+		return expenseRepository.findAll();
+	}
+
+	public void save(Employee employee) {
+//		employee.setCreatedAt(System.currentTimeMillis());
+		expenseRepository.save(employee);
+	}
+
+	@Override
+	public Employee findById(Integer id) {
+		if(expenseRepository.findById(Long.valueOf(id)).isPresent()) {
+			return expenseRepository.findById(Long.valueOf(id)).get();
+		}
+		return null;
+	}
+
+	@Override
+	public void delete(Integer id) {
+		Employee employee = findById(id);
+		expenseRepository.delete(employee);
+	}
+	
+	
+}

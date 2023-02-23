@@ -1,0 +1,11 @@
+package com.deloitte.expense.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.deloitte.expense.model.EmploymentHistory;
+
+public interface EmploymentHistoryRepository extends JpaRepository<EmploymentHistory, Long>{
+	List<EmploymentHistory> findAll();
+}

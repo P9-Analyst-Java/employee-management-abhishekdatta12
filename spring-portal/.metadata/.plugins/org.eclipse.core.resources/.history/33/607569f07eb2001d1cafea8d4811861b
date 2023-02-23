@@ -1,0 +1,70 @@
+<%@ page language="java" isELIgnored="false" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<c:set var="contextRoot" value="${pageContext.request.contextPath}"/>
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+body{
+	font-family: garamond;
+	font-size: 16px;
+	text-align: center;
+	background-color: lavender;
+}
+div{
+	background-color: white;
+	margin-left: auto;
+  	margin-right: auto;
+  	width: 200px;
+  	align-items: center;
+  	font-size: 20px;
+	
+}
+table, th, td{
+	text-align: center;
+	border: 3px solid indigo;
+	border-collapse: collapse;
+	padding: 3px;
+	margin: 3px;
+}
+table{
+	margin-left: auto;
+  	margin-right: auto;
+  	background-color: lavenderblush;
+}
+td{
+text-align: center;
+background-color: lightcyan;
+}
+th, td{
+	padding: 10px;
+}
+</style>
+<meta charset="ISO-8859-1">
+<title>History</title>
+</head>
+<body>
+
+	<h1>Employment History</h1>
+	<table>
+	<tr>
+	<th>Employee ID</th>
+	<th>Organization Name</th>
+	<th>From</th>
+	<th>Location</th>
+	<th>Country</th>
+	<th>Post</th>
+	<th>Skills used</th>
+	</tr>
+	<c:forEach var="employee" items="${employees}">
+		<tr>
+			<td>${employee.organizationName}</td>
+			
+		</tr>
+	</c:forEach>
+	</table>
+	
+</body>
+</html>

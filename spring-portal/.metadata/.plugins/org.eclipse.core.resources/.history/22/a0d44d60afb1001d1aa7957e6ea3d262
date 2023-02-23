@@ -1,0 +1,36 @@
+package com.deloitte.expense.model;
+
+import java.util.Date;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+public class EmploymentHistory {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
+	
+	@Column(name = "emp_id")
+	private Integer empId;
+	
+	@Column(name = "organization_name")
+	private String organizationName;
+	
+	@Column(name = "from_date")
+	private Date fromDate;
+	
+	@Column(name = "location")
+	private String location;
+	
+	@Column(name = "country")
+	private String country;
+	
+	@Column(name = "post")
+	private String post;
+	
+	private String skillUsed;
+	
+}

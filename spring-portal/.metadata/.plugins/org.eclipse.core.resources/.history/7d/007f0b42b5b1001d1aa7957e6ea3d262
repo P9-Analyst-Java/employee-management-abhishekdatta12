@@ -1,0 +1,5 @@
+package com.deloitte.expense.repository;
+
+public interface EmploymentHistoryRepository {
+
+}

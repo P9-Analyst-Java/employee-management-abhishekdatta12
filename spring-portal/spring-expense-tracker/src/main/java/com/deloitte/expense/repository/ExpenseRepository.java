@@ -1,0 +1,15 @@
+package com.deloitte.expense.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.deloitte.expense.model.Employee;
+//import com.deloitte.expense.model.Expense;
+
+public interface ExpenseRepository extends JpaRepository<Employee, Long> {
+
+	List<Employee> findAll();
+	List<Employee> findByFirstName(String name);
+	
+}
